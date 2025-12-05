@@ -1,0 +1,57 @@
+@use '../global' as *;
+
+/* ------------------------ */
+/* 改行用、SP・PC非表示用の設定 */
+/* ------------------------ */
+
+/* ---------- 改行 〜 more：以上、less：以下 | ここから ---------- */
+/* 768px以下で改行 */
+.br-768-less {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+/* 768px以上で改行 */
+.br-768-more {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+/* ---------- 改行 | ここまで ---------- */
+
+/* ---------- 表示・非表示 〜 more：以上、less：以下 | ここから ---------- */
+/* PCのとき非表示 */
+.pc-none {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+/* SPのとき非表示 */
+.sp-none {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+/* ---------- 表示・非表示 〜 more：以上、less：以下 | ここまで ---------- */
+
+/* ---------- margin-topの設定 | ここから ---------- */
+@for $i from 1 through 200 {
+  .mt-pc-#{$i} {
+    margin-top: rem($i);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  @for $i from 1 through 200 {
+    .mt-sp-#{$i} {
+      margin-top: rem($i);
+    }
+  }
+}
+/* ---------- margin-topの設定 | ここまで ---------- */

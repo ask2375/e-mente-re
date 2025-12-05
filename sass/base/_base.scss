@@ -1,0 +1,66 @@
+@use '../global' as *;
+
+//PCファースト
+html {
+  font-size: 16px;
+
+  @media (max-width: $inner) {
+    font-size: vw(strip-unit($inner), 16);
+  }
+
+  @include mq('md') {
+    font-size: 16px;
+  }
+
+  //~375px
+  @media (max-width: 375px) {
+    font-size: vw(375, 16);
+  }
+}
+
+/* フォントカラーは、使用頻度が多いものを選択する */
+body {
+  font-family: $gen;
+  color: $black_171717;
+  line-height: 1;
+}
+
+// PCでは電話番号のクリックを無効にする
+a[href^='tel:'] {
+  pointer-events: none;
+  @include mq('md') {
+    pointer-events: auto;
+  }
+}
+
+// aタグには標準でホバーアニメーションが付与されるようにする
+a {
+  // transition: opacity 0.3s;
+  // transition: opacity 0.3s, color 0.3s, filter 0.3s;
+  // text-decoration: none;
+  // &:hover {
+  //   opacity: 0.6;
+  // }
+}
+
+/* コンテンツ量が少なく短いページでもフッターを最下部に表示する ---- */
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+/* コンテンツ量が少なく短いページでもフッターを最下部に表示する ここまで ---- */
+
+/* YouTubeのframeborder属性の変わり(HTML5の標準仕様で廃止されているため) */
+iframe {
+  border: none;
+}
+
+/* ジャギー対策 */
+img {
+  image-rendering: auto;
+}

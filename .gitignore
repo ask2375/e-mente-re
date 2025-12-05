@@ -1,0 +1,13 @@
+# GitHubの監視対象から除外
+assets/css/style.css
+assets/css/style.css.map
+.DS_Store
+node_modules/
+.vscode
+.claude/
+CLAUDE.md
+AGENTS.md
+docs/
+.gemini-clipboard/
+.cursorrules
+xd-file/

@@ -1,0 +1,16 @@
+//------------------------------------------
+// moduleフォルダ内のファイルを_index.scssでまとめる
+// アルファベット順に記載する
+// 『inner』は上に記載
+//------------------------------------------
+
+@forward 'inner';
+
+//------------------------------------------
+
+@forward 'about';
+@forward 'body-bg';
+@forward 'anime';
+@forward 'footer';
+@forward 'header';
+@forward 'lower-fv';

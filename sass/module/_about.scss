@@ -1,0 +1,75 @@
+@use '../global' as *;
+
+.about {
+  position: relative;
+  padding: rem(100) 0;
+
+  overflow: clip;
+  @include mq(md) {
+    padding: rem(50) 0;
+  }
+}
+
+// .about::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   mask-image: url(../../assets/images/common/bg-wave.svg);
+//   mask-size: 100% rem(100);
+//   mask-repeat: no-repeat;
+//   background-color: red;
+//   width: 100%;
+//   height: rem(100);
+//   mask-repeat: repeat-x;
+//   mask-position: left top;
+// }
+
+.about__inner {
+}
+
+.about__text01 {
+  font-size: rem(48);
+  color: $red_be0000;
+  @include mq(lg) {
+    font-size: rem(32);
+  }
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+.about__text02 {
+  font-size: 50px;
+  color: $red_be0000;
+}
+
+.about__text03 {
+  font-size: rem(50);
+  @include mq('md') {
+    font-size: rem(25);
+  }
+}
+
+.about__box {
+  padding: rem(30) rem(20);
+}
+
+.about__wrapper {
+  max-width: rem(1000);
+  width: 100%;
+  margin: auto;
+  padding: rem(50);
+}
+
+.about__img {
+  max-width: rem(500);
+  width: 100%;
+  margin: auto;
+}
+
+.about__img img {
+  width: 100%;
+  aspect-ratio: 700 / 450;
+  object-fit: cover;
+}
