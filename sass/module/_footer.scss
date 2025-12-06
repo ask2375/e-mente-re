@@ -1,7 +1,13 @@
 @use '../global' as *;
 
 .footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(500);
 }
 
-.footer__inner {
+.footer p {
+  font-size: 100px;
 }
